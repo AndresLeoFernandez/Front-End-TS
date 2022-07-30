@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <title>Ejercicios FRONT END + TS</title>
+  </head>
+  <body>
+    <h1>Bienvenido a las Practicas de FRONT END + TS</h1>
+    <p>
+      Aqui encontraras los distintos ejercicios que se fueron planteando a lo
+      largo de las clases tanto practicas como los obligatorios.
+    </p>
+    <h2>Listado</h2>
+    <ol>
+      <li><a href="#ejercicio1">Contador de Clics</a></li>
+      <li>
+        <a href="#ejercicio2">Incrementar y Decrementar el Contador</a>
+        <b>(Obligatorio)</b>
+      </li>
+      <li>
+        <a href="#ejercicio3"
+          >Agregar valor de compra y obtener la suma total</a
+        >
+      </li>
+    </ol>
+    <div class="container">
+			<hr />
+      <div id="ejercicio1" name="ejercicio1">
+				<h2>1. Llegaste a nuestro contador de click!</h2>
+				<hr />
+        <p>
+          Al hacer click en el boton "Contar click!" de abajo se visualizara la
+          cantidad de veces que se oprimio por pantalla como por consola.
+        </p>
+        <button id="clickear">Contar click!</button>
+        <span id="visorContador"></span>
+			</div>
+			<hr />
+      <div id="ejercicio2" name="ejercicio2">
+				<h2>2. Incrementar y Decrementar el Contador</h2>
+				<hr />
+        <cite
+          ><b>Enunciado:</b> En su página web, agregar un campo para llevar un
+          contador de X elemento que siempre arranque en 0.
+          <ul>
+            <li>En la página web se muestra la cantidad de X</li>
+            <li>Hay un botón para incrementar la cantidad</li>
+            <li>Hay un botón para decrementar la cantidad</li>
+          </ul>
+        </cite>
+        <p>
+          <b>Aclaraciones:</b> Permite decrementar el valor del Visor si se
+          oprime el boton "<b>-</b>" e incrementar el valor del Visor al
+          cliquear el boton "<b>+</b>"
+        </p>
+        <button id="decrementar" title="Decrementa el valor">-</button>
+        <input
+          type="text"
+          id="visorIncDec"
+          value="0"
+          size="2"
+          readonly
+          disabled
+        />
+        <button id="incrementar" title="Incrementa el valor">+</button>
+			</div>
+			<hr />
+      <div id="ejercicio3" name="ejercicio3">
+				<h2>3. Agregar valor de compra y obtener la suma total</h2>
+				<hr />
+        <cite
+          ><b>Enunciado:</b> Hacer un form con una entrada y dos botones:
+          <ul>
+            <li>Uno para agregar el precio de la compra</li>
+            <li>El otro para calcular el total de la compra.</li>
+          </ul>
+        </cite>
+        <hr />
+        
+          <label><b>Ingrese el Precio</b></label>
+          <input type="number" name="precio-unitario" id="precio-unitario"/>
+          <button id="btn-agregar">Agregar a la Lista</button>
+          <hr />
+          <label><b>Lista de Precios Ingresados</b></label>
+          <ol id="lista"></ol>
+          <hr />
+          <button id="btn-calcular">Calcular Total</button> <span id="precio-total">
+        
+      </div>
+    </div>
+    <script src="src/index.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+body {
+  font-family: sans-serif;
+}
+#visorIncDec {
+  text-align: right;
+}
+.ocultar {
+  display: none;
+}
+.mostrar {
+  display: block;
+}
