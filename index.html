@@ -25,6 +25,16 @@
           >Agregar valor de compra y obtener la suma total</a
         >
       </li>
+      <li>
+        <a href="#ejercicio4"
+          >Mostrar / Ocultar el contenido de un div</a
+        >
+      </li>
+      <li>
+          <a href="#ejercicio5"
+            >Mostrar / Ocultar + de un parrafo</a
+          >
+        </li>
     </ol>
     <div class="container">
 			<hr />
@@ -79,18 +89,50 @@
           </ul>
         </cite>
         <hr />
-        
           <label><b>Ingrese el Precio</b></label>
-          <input type="number" name="precio-unitario" id="precio-unitario"/>
+          <input type="number" size="3" name="precio-unitario" id="precio-unitario"/>
           <button id="btn-agregar">Agregar a la Lista</button>
           <hr />
           <label><b>Lista de Precios Ingresados</b></label>
           <ol id="lista"></ol>
           <hr />
           <button id="btn-calcular">Calcular Total</button> <span id="precio-total">
-        
       </div>
+      <div id="ejercicio4" name="ejercicio4">
+				<h2>4. Mostrar / Ocultar el contenido de un div</h2>
+				<hr />
+        <cite
+          ><b>Enunciado:</b> Utilizando lo visto en esta clase, crear una función
+          Typescript que oculte y muestre un div que contiene
+          información.
+        </cite>
+        <hr />
+          <button id="btn-mostrar-ocultar">Ocultar contendio del Div</button>
+          <hr />
+          <div id="contenido-mostrar" class="mostrar">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eos distinctio consectetur, blanditiis debitis necessitatibus fuga, corrupti molestiae laboriosam, minima ipsa dolorum iure numquam impedit reprehenderit molestias quod. Optio, repellendus!</p>
+          </div>
+      </div>
+      <div id="ejercicio5" name="ejercicio5">
+          <h2>4. Mostrar / Ocultar + de un parrafo</h2>
+          <hr />
+          <cite
+            ><b>Enunciado:</b> Utilizando lo visto en esta clase, crear una función
+            Typescript que oculte y muestre un div que contiene
+            información.
+          </cite>
+          <hr />
+            <button id="btn-mostrar-ocultar-2">Ocultar Parrafo</button>
+            <hr />
+            <div id="parrafos-mostrar">
+            Esto esta dentro del Div pero no se va a ocultar nunca
+            <p class="mostrar">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae eos distinctio consectetur, blanditiis debitis necessitatibus fuga, corrupti molestiae laboriosam, minima ipsa dolorum iure numquam impedit reprehenderit molestias quod. Optio, repellendus!</p>
+            <p class="mostrar">Hola este es el parrafo numero 2</p>  
+            
+          </div>
+        </div>
     </div>
+
     <script src="src/index.ts"></script>
   </body>
 </html>

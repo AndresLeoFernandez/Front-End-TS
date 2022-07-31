@@ -2,7 +2,7 @@ body {
   font-family: sans-serif;
 }
 #visorIncDec {
-  text-align: right;
+  text-align: center;
 }
 .ocultar {
   display: none;

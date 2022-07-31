@@ -10,6 +10,7 @@ const clickear = () => {
 };
 
 botonContar.addEventListener("click", clickear);
+
 //ejercicio 2
 let contadorIncDec: number = 0;
 let botonDecrementar = document.getElementById("decrementar");
@@ -34,13 +35,13 @@ let agregar = document.getElementById("btn-agregar");
 let calcular = document.getElementById("btn-calcular");
 let lista = document.getElementById("lista");
 let total = document.getElementById("precio-total");
-//let vaciar = document.getElementById("vaciar");
 let precios: number[] = [];
 let suma: number = 0;
 
 const agregarPrecio = () => {
   precios.push(precio.value);
   lista?.innerHTML += `<li> ${precio?.value}</li>`;
+  precio.value = "";
 };
 
 const calcularPrecioTotal = () => {
@@ -48,8 +49,48 @@ const calcularPrecioTotal = () => {
   for (let i: number = 0; i < precios.length; i++) {
     suma += Number(precios[i]);
   }
-  total?.innerHTML = suma;
+  total?.innerHTML =
+    "La suma total de la lista de Precios ingresados es " + suma;
 };
 
 agregar.addEventListener("click", agregarPrecio);
 calcular.addEventListener("click", calcularPrecioTotal);
+
+//Ejercicio 4
+
+let botonMostrarDiv = document.getElementById("btn-mostrar-ocultar");
+
+const intercambiaVisual = () => {
+  let elem = document.getElementById("contenido-mostrar");
+  if (elem.classList.contains("mostrar")) {
+    elem.classList.remove("mostrar");
+    elem.classList.add("ocultar");
+    botonMostrarDiv?.innerText = "Mostrar contendio del Div";
+  } else {
+    elem.classList.remove("ocultar");
+    elem.classList.add("mostrar");
+    botonMostrarDiv?.innerText = "Ocultar contendio del Div";
+  }
+};
+
+botonMostrarDiv.addEventListener("click", intercambiaVisual);
+
+//Ejercicio 5
+let botonMostrar = document.getElementById("btn-mostrar-ocultar-2");
+
+const intercambiaVisualParrafos = () => {
+  let elementos = document.querySelectorAll("p");
+  for (let i: number = 0; i < elementos.length; i++) {
+    if (elementos[i].classList.contains("mostrar")) {
+      elementos[i].classList.remove("mostrar");
+      elementos[i].classList.add("ocultar");
+      //botonMostrar?.innerText = "Mostrar Parrafos";
+    } else {
+      elementos[i].classList.remove("ocultar");
+      elementos[i].classList.add("mostrar");
+      //botonMostrar?.innerText = "Ocultar Parrafos";
+    }
+  }
+};
+
+botonMostrar.addEventListener("click", intercambiaVisualParrafos);
