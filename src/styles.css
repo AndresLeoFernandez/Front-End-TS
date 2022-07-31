@@ -10,3 +10,9 @@ body {
 .mostrar {
   display: block;
 }
+#lista-ejercicios li {
+  margin: 40px 0px;
+}
+.bloque {
+  margin: 40px 0 100px 0px;
+}
