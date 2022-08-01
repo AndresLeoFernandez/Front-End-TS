@@ -32,9 +32,14 @@
       </li>
       <li>
           <a href="#ejercicio5"
-            >Mostrar / Ocultar + de un parrafo</a
+            >Mostrar / Ocultar + de un parrafo con un solo boton</a
           >
         </li>
+        <li>
+            <a href="#ejercicio6"
+              >Agregue dinámicamente nuevas tareas sin recargar la pagina</a
+              >
+            </li>
     </ol>
     <div class="container">
 			
@@ -119,7 +124,7 @@
       </div>
       <div id="ejercicio5" name="ejercicio5" class="bloque">
 				<hr />
-        <h2>5. Mostrar / Ocultar + de un parrafo</h2>
+        <h2>5. Mostrar / Ocultar + de un parrafo con un solo boton</h2>
         <hr />
         <cite
             ><b>Enunciado:</b> Utilizando lo visto en esta clase, crear una función
@@ -135,7 +140,26 @@
             <p class="mostrar">Hola este es el parrafo numero 2</p>  
             
           </div>
-        </div>
+      </div>
+      <div id="ejercicio6" name="ejercicio6" class="bloque">
+        	<hr />
+        <h2>6. Agregue dinámicamente nuevas tareas sin recargar la pagina</h2>
+        <hr />
+        <cite
+            ><b>Enunciado:</b> Dada una lista de tareas, permitir que el usuario
+            agregue dinámicamente nuevas tareas y mostrarlas sin necesidad de actualizar la
+            página. </cite>
+        <hr />
+        <label><b>Ingrese una tarea nueva</b></label>
+          <input type="text" name="tarea-unitario" id="tarea-unitario"/>
+          <button id="btn-agregar-tarea">Agregar su tarea a la Lista</button>
+          <hr />
+          <label><b>Lista de Tareas</b></label>
+          <ol id="lista-tareas"></ol>
+          <hr />
+
+      </div>
+
     </div>
 
     <script src="src/index.ts"></script>

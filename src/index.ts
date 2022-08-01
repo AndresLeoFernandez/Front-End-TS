@@ -94,3 +94,18 @@ const intercambiaVisualParrafos = () => {
 };
 
 botonMostrar.addEventListener("click", intercambiaVisualParrafos);
+
+// Ejercicio 6
+
+let tarea = document.getElementById("tarea-unitario");
+let agregarTarea = document.getElementById("btn-agregar-tarea");
+let listaTareas = document.getElementById("lista-tareas");
+let total = document.getElementById("precio-total");
+//let tprecios: number[] = [];
+
+const agregarTareas = () => {
+  listaTareas?.innerHTML += `<li> ${tarea?.value} </li>`;
+  tarea.value = "";
+};
+
+agregarTarea.addEventListener("click", agregarTareas);
