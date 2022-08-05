@@ -84,11 +84,9 @@ const intercambiaVisualParrafos = () => {
     if (elementos[i].classList.contains("mostrar")) {
       elementos[i].classList.remove("mostrar");
       elementos[i].classList.add("ocultar");
-      //botonMostrar?.innerText = "Mostrar Parrafos";
     } else {
       elementos[i].classList.remove("ocultar");
       elementos[i].classList.add("mostrar");
-      //botonMostrar?.innerText = "Ocultar Parrafos";
     }
   }
 };
@@ -107,3 +105,47 @@ const agregarTareas = () => {
 };
 
 agregarTarea?.addEventListener("click", agregarTareas);
+
+// Ejercicio 7
+// Ordenamiento
+let cantidad: number = 10; // Cantidad total de elementos del arreglo.
+let clientes: string[] = new Array(cantidad); // Arreglo para alojar nombres
+let facturacion: number[] = new Array(cantidad); // Arreglo para alojar valor numerico
+let btnAgregarClientes = document.getElementById("btn-cargar-clientes");
+let listaClientes = document.getElementById("lista-clientes");
+
+const cargarClientes = () => {
+  console.log("Cargando los Clientes y su Facturación de forma ordenada");
+  //Cargo de forma ordenada los clientes uno por uno
+  for (let numCliente: number = 0; numCliente < cantidad; numCliente++) {
+    // Solicito los datos
+    let cliente: string = String(prompt(`Cliente ${numCliente + 1} : `));
+    let fact: number = Number(prompt(`Facturación ${numCliente + 1} :`));
+    let i: number = 0;
+    // Recorro el arreglo para ubicar la posicion segun la facturacion
+    while (i < numCliente && facturacion[i] > fact) {
+      i++;
+    }
+    for (let j: number = numCliente; j > i; j--) {
+      clientes[j] = clientes[j - 1];
+      facturacion[j] = facturacion[j - 1];
+    }
+    clientes[i] = cliente;
+    facturacion[i] = fact;
+  }
+  listaClientes?.innerHTML = "";
+  for (let posicion: number = 0; posicion < clientes.length; posicion++) {
+    listaClientes?.innerHTML += `<tr><td>(${posicion + 1})</td><td>${
+      clientes[posicion]
+    }</td><td>${facturacion[posicion]}</td><tr>`;
+  }
+};
+/*
+const mostrasCincoMejoresClientes = () => {
+  for (let posicion: number = 0; posicion < 4; posicion++) {
+    console.log(
+      `(${posicion}) ${clientes[posicion]}, ${facturacion[posicion]}`
+    );
+  }
+};*/
+btnAgregarClientes?.addEventListener("click", cargarClientes);

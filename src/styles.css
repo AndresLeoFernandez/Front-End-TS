@@ -16,3 +16,16 @@ body {
 .bloque {
   margin: 40px 0 100px 0px;
 }
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 5px 5px;
+}
+tr:nth-child(even) {
+  background-color: #d6eeee;
+}
+td {
+  text-align: center;
+}
