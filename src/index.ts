@@ -9,7 +9,7 @@ const clickear = () => {
   visorContar?.innerText = `Hiciste ${contador} clicks`;
 };
 
-botonContar.addEventListener("click", clickear);
+botonContar?.addEventListener("click", clickear);
 
 //ejercicio 2
 let contadorIncDec: number = 0;
@@ -26,8 +26,8 @@ const decrementarUno = () => {
   inputvisor?.value = contadorIncDec.toString();
 };
 
-botonIncrementar.addEventListener("click", incrementarUno);
-botonDecrementar.addEventListener("click", decrementarUno);
+botonIncrementar?.addEventListener("click", incrementarUno);
+botonDecrementar?.addEventListener("click", decrementarUno);
 
 //Ejercicio 3
 let precio = document.getElementById("precio-unitario");
@@ -62,18 +62,18 @@ let botonMostrarDiv = document.getElementById("btn-mostrar-ocultar");
 
 const intercambiaVisual = () => {
   let elem = document.getElementById("contenido-mostrar");
-  if (elem.classList.contains("mostrar")) {
+  if (elem?.classList.contains("mostrar")) {
     elem.classList.remove("mostrar");
     elem.classList.add("ocultar");
     botonMostrarDiv?.innerText = "Mostrar contendio del Div";
   } else {
-    elem.classList.remove("ocultar");
-    elem.classList.add("mostrar");
+    elem?.classList.remove("ocultar");
+    elem?.classList.add("mostrar");
     botonMostrarDiv?.innerText = "Ocultar contendio del Div";
   }
 };
 
-botonMostrarDiv.addEventListener("click", intercambiaVisual);
+botonMostrarDiv?.addEventListener("click", intercambiaVisual);
 
 //Ejercicio 5
 let botonMostrar = document.getElementById("btn-mostrar-ocultar-2");
@@ -93,19 +93,17 @@ const intercambiaVisualParrafos = () => {
   }
 };
 
-botonMostrar.addEventListener("click", intercambiaVisualParrafos);
+botonMostrar?.addEventListener("click", intercambiaVisualParrafos);
 
 // Ejercicio 6
 
 let tarea = document.getElementById("tarea-unitario");
 let agregarTarea = document.getElementById("btn-agregar-tarea");
 let listaTareas = document.getElementById("lista-tareas");
-let total = document.getElementById("precio-total");
-//let tprecios: number[] = [];
 
 const agregarTareas = () => {
   listaTareas?.innerHTML += `<li> ${tarea?.value} </li>`;
-  tarea.value = "";
+  tarea?.value = "";
 };
 
-agregarTarea.addEventListener("click", agregarTareas);
+agregarTarea?.addEventListener("click", agregarTareas);
