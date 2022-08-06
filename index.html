@@ -16,38 +16,15 @@
     <h2>Listado</h2>
     <ol id="lista-ejercicios">
       <li><a href="#ejercicio1">Contador de Clics</a></li>
-      <li>
-        <a href="#ejercicio2">Incrementar y Decrementar el Contador</a>
-        <b>(Obligatorio)</b>
-      </li>
-      <li>
-        <a href="#ejercicio3"
-          >Agregar valor de compra y obtener la suma total</a
-        >
-      </li>
-      <li>
-        <a href="#ejercicio4"
-          >Mostrar / Ocultar el contenido de un div</a
-        > <b>(Obligatorio)</b>
-      </li>
-      <li>
-          <a href="#ejercicio5"
-            >Mostrar / Ocultar + de un parrafo con un solo boton</a
-          >
-        </li>
-        <li>
-          <a href="#ejercicio6"
-              >Agregue dinámicamente nuevas tareas sin recargar la pagina</a
-              > <b>(Obligatorio)</b>
-        </li>
-        <li>
-          <a href="#ejercicio7"
-                >Cargar 10 Clientes y su facturación. Luego opcion de visualizarlos de forma ordenada conformes a la mayor Facturación.</a
-                > 
-              </li>
+      <li><a href="#ejercicio2">Incrementar y Decrementar el Contador</a> <b>(Obligatorio)</b></li>
+      <li><a href="#ejercicio3">Agregar valor de compra y obtener la suma total</a></li>
+      <li><a href="#ejercicio4">Mostrar / Ocultar el contenido de un div</a> <b>(Obligatorio)</b></li>
+      <li><a href="#ejercicio5">Mostrar / Ocultar + de un parrafo con un solo boton</a></li>
+      <li><a href="#ejercicio6">Agregue dinámicamente nuevas tareas sin recargar la pagina</a> <b>(Obligatorio)</b></li>
+        <li><a href="#ejercicio7">Cargar 10 Clientes y su facturación. Luego opcion de visualizarlos de forma ordenada conformes a la mayor Facturación.</a></li>
+        <li><a href="#ejercicio8">Probar el metodo de Ordenamiento Burbuja</a></li>
     </ol>
     <div class="container">
-			
       <div id="ejercicio1" name="ejercicio1" class="bloque">
         <hr />
         <h2>1. Llegaste a nuestro contador de click!</h2>
@@ -59,19 +36,21 @@
         <button id="clickear" class="bloque">Contar click!</button>
         <span id="visorContador"></span>
 			</div>
-			
       <div id="ejercicio2" name="ejercicio2" class="bloque">
         <hr />
         <h2>2. Incrementar y Decrementar el Contador</h2>
 				<hr />
         <cite
-          ><b>Enunciado:</b> En su página web, agregar un campo para llevar un
+          ><b>Enunciado:</b>
+          <p>
+           En su página web, agregar un campo para llevar un
           contador de X elemento que siempre arranque en 0.
           <ul>
             <li>En la página web se muestra la cantidad de X</li>
             <li>Hay un botón para incrementar la cantidad</li>
             <li>Hay un botón para decrementar la cantidad</li>
           </ul>
+        </p>
         </cite>
         <p>
           <b>Aclaraciones:</b> Permite decrementar el valor del Visor si se
@@ -89,7 +68,6 @@
         />
         <button id="incrementar" title="Incrementa el valor">+</button>
 			</div>
-			
       <div id="ejercicio3" name="ejercicio3" class="bloque">
         <hr />
         <h2>3. Agregar valor de compra y obtener la suma total</h2>
@@ -168,22 +146,25 @@
       <h2>7. Cargar 10 Clientes y su facturación. Luego opcion de visualizarlos de forma ordenada conformes a la mayor Facturación.</h2>
       <hr />
       <cite
-          ><b>Enunciado:</b> Una empresa quiere saber quienes fueron los clientes
+          ><b>Enunciado:</b>
+          <br/>
+          Una empresa quiere saber quienes fueron los clientes
           que más facturaron en un mes
           <ul>
             <li>Sean dos arreglos, uno para los nombres de los clientes y otro para los montos de facturación (enteros)</li>
             <li>La cantidad de clientes es fija (10)</li>
             <li>Mostrar por pantalla los 5 clientes que más facturaron y los montos</li>
-            <li>Pensar en cómo cargar la información para facilitar la escritura del rankingDada una lista de tareas, permitir que el usuario
-          agregue dinámicamente nuevas tareas y mostrarlas sin necesidad de actualizar la página.</li>
+            <li>Pensar en cómo cargar la información para facilitar la escritura del ranking.</li>
           </ul>
         </cite>
       <hr />
       <label><b>Oprima el boton para comenzar la carga</b></label>
         <button id="btn-cargar-clientes">Comenzar</button>
+        <p>Como resultado vera una vez que realice la carga de los clientes y sus facturaciones en la Tabla de abajo como quedan ordenados conforme a la mayor Facturación.</p>
         <hr />
-        <table style="width:50%">
-            <caption>Los 10 Clientes</caption>
+        <br/>
+        <table style="width:60%">
+            <caption><b>Los 10 Clientes ordenados por Mayor Facturación</b></caption>
           <thead><tr><th style="width:15%">Orden</th><th style="width:60%">Cliente</th><th style="width:20%">Importe</th></tr></thead>
           <tbody id="lista-clientes">
             <tr><td>1</td><td></td><td></td></tr>
@@ -198,6 +179,18 @@
             <tr><td>10</td><td></td><td></td></tr>
           </tbody>
         </table>
+        <br/>
+        <button id="btn-ver-consola" class="ocultar">Ver Mejores 5 en consola</button>
+      </div>
+      <div id="ejercicio8" name="ejercicio8" class="bloque">
+        <hr />
+        <h2>8. Probar el metodo de Ordenamiento Burbuja</h2>
+        <hr />
+        <label><b>Oprima el boton para comenzar el proceso de carga, ordenamiento y muestra del Arreglo</b></label>
+        <br/>
+        <button id="btn-cargar-arreglo">Comenzar Proceso</button>
+        <br/>
+        <div id="visor-8"></div>
       </div>
   </div>
 
